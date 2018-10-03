@@ -4,6 +4,7 @@ EXPOSE 8000
 
 RUN pip install --upgrade pip
 RUN pip install mkdocs
+RUN pip install mdx_gh_links
 
 WORKDIR /docroot
 RUN mkdocs new .

@@ -619,7 +619,7 @@ PS> docker run --rm -it myimage
 ```
 
 ```bash
-wget www.synaptivemedical.com
+wget www.google.com
 cat index.html
 exit
 ```
@@ -869,8 +869,7 @@ The examples are included in repo for this workshop.
 Clone the git repo:
 
 ```powershell
-PS> git clone https://git.synaptivemedical.com/scm/~david.mcfadzean/docker.git
-PS> svn co https://synaptive.svn.cloudforge.com/atlas/Hackathons/Docker-workshop
+PS> git clone https://github.com/macterra/docker-workshop.git
 ```
 
 ## MkDocs Container
@@ -949,7 +948,7 @@ To do this we use volume mapping to inject a local directory into the container:
 PS> docker run --rm -it -p 8888:8000 -v c:\src\docker\browser:/docroot mkdocs
 ```
 
-This replaces the `/docroot` folder in the container (the one initialized with the MkDocs default site in the Dockerfile) with a folder containing documentation copied from the [Platform Common Browser](https://git.synaptivemedical.com/projects/COM/repos/browser/browse) project.
+This replaces the `/docroot` folder in the container (the one initialized with the MkDocs default site in the Dockerfile) with a folder containing documentation copied from the [TBD]() project.
 
 ----
 

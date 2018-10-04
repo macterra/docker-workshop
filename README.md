@@ -942,13 +942,17 @@ Now you should be able to navigate to `http://localhost:8888/` and view the defa
 
 The default site in the mkdocs container is useful for testing the container but we want the container to build and publish documentation for projects outside the container.
 
-To do this we use volume mapping to inject a local directory into the container:
+First we'll checkout the mkdocs repo itself because it is a good example of "eating your own dog food".
+
+Then we use volume mapping to inject a local docs directory into the container.
 
 ```powershell
-PS> docker run --rm -it -p 8888:8000 -v c:\src\docker\browser:/docroot mkdocs
+PS> cd c:\src
+PS> git clone https://github.com/mkdocs/mkdocs.git
+PS> docker run --rm -it -p 8888:8000 -v c:\src\mkdocs:/docroot mkdocs
 ```
 
-This replaces the `/docroot` folder in the container (the one initialized with the MkDocs default site in the Dockerfile) with a folder containing documentation copied from the [TBD]() project.
+This replaces the `/docroot` folder in the container (the one initialized with the MkDocs default site in the Dockerfile) with a folder containing documentation copied from the mkdocs project.
 
 ----
 
